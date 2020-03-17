@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.vakoinoglou.cocoapods.search</string>
+	<key>connections</key>
+	<dict>
+		<key>5D0D2B40-8597-495D-B53E-C6449FF0C273</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7F708189-4112-4D9E-B8C8-9818B5F48D65</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>74678CA7-DD96-4953-8F38-8DF487EF2B4B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EE4DFDF8-0F16-4761-B1D1-562A8D06AE30</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>92538949-BD46-4A12-978E-9136C4DB0A86</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>74678CA7-DD96-4953-8F38-8DF487EF2B4B</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>copy...</string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>5D0D2B40-8597-495D-B53E-C6449FF0C273</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Vasilis Akoinoglou</string>
+	<key>description</key>
+	<string>Fast CocoaPods Lookup</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>CocoaPods</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>script</key>
+				<string>import sys
+pod = "{query}".split("|")[1]
+version = "{query}".split("|")[2]
+minor_version = ".".join(version.split(".")[0:2])
+sys.stdout.write("pod" + " " + "'" + pod + "', " +"'~&gt; " + minor_version + "'")</string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>74678CA7-DD96-4953-8F38-8DF487EF2B4B</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>EE4DFDF8-0F16-4761-B1D1-562A8D06AE30</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>62</integer>
+				<key>keyword</key>
+				<string>pod</string>
+				<key>runningsubtext</key>
+				<string>Searching for Pods...</string>
+				<key>script</key>
+				<string>./alf {query}</string>
+				<key>subtext</key>
+				<string>Search for a Pod</string>
+				<key>title</key>
+				<string>CocoaPods</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>92538949-BD46-4A12-978E-9136C4DB0A86</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>script</key>
+				<string>open location "{query}"</string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.script</string>
+			<key>uid</key>
+			<string>7F708189-4112-4D9E-B8C8-9818B5F48D65</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>script</key>
+				<string>import sys
+url = "{query}".split("|")[0]
+sys.stdout.write(url)</string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>5D0D2B40-8597-495D-B53E-C6449FF0C273</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>How to use it
+
+Download the workflow directly from GitHub (or clone the repo / download a zip) &amp; double-click the CocoaPods.alfredworkflow file to install it into Alfred.
+Bring Alfred up and type pod followed by your query.
+Once you have a result selected Return opens the pod's homepage &amp; Alt+Return copies the pod's definition for your podfile.
+Enjoy!
+
+Notes:
+
+The backend utility is now a binary written in pure Cocoa (instead of a python script). The result is that is wayyy faster and smaller than the previous version.
+The workflow uses the Cocoapods.org public search API. Many thanks to @floere for his work, tips &amp; heads up.
+Contact me:
+
+alladinian@gmail.com || @alladinian</string>
+	<key>uidata</key>
+	<dict>
+		<key>5D0D2B40-8597-495D-B53E-C6449FF0C273</key>
+		<dict>
+			<key>ypos</key>
+			<real>250</real>
+		</dict>
+		<key>74678CA7-DD96-4953-8F38-8DF487EF2B4B</key>
+		<dict>
+			<key>ypos</key>
+			<real>50</real>
+		</dict>
+		<key>7F708189-4112-4D9E-B8C8-9818B5F48D65</key>
+		<dict>
+			<key>ypos</key>
+			<real>220</real>
+		</dict>
+		<key>92538949-BD46-4A12-978E-9136C4DB0A86</key>
+		<dict>
+			<key>ypos</key>
+			<real>190</real>
+		</dict>
+		<key>EE4DFDF8-0F16-4761-B1D1-562A8D06AE30</key>
+		<dict>
+			<key>ypos</key>
+			<real>100</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>https://github.com/alladinian/Alfred-CocoaPods-Search</string>
+</dict>
+</plist>

@@ -1,0 +1,52 @@
++-o AppleSmartBattery  <class AppleSmartBattery, id 0x1000002d1, registered, matched, active, busy 0 (0 ms), retain 6>
+    {
+      "TimeRemaining" = 648
+      "AvgTimeToEmpty" = 648
+      "AppleRawCurrentCapacity" = 4480
+      "InstantTimeToEmpty" = 940
+      "AppleRawMaxCapacity" = 5204
+      "ExternalChargeCapable" = Yes
+      "FullPathUpdated" = 1545815557
+      "CellVoltage" = (4145,4150,4144,0)
+      "Voltage" = 12439
+      "BatteryInvalidWakeSeconds" = 30
+      "AdapterInfo" = 0
+      "MaxCapacity" = 5204
+      "DesignCycleCount70" = 13
+      "PermanentFailureStatus" = 0
+      "Manufacturer" = "SWD"
+      "Location" = 0
+      "CurrentCapacity" = 4480
+      "BatteryFCCData" = {"DOD2"=16386,"DOD0"=12290,"PassedCharge"=9730,"DOD1"=10242,"ResScale"=29952}
+      "LegacyBatteryInfo" = {"Amperage"=18446744073709551201,"Flags"=4,"Capacity"=5204,"Current"=4480,"Voltage"=12439,"Cycle Count"=14}
+      "FirmwareSerialNumber" = 1
+      "BatteryInstalled" = Yes
+      "PackReserve" = 117
+      "CycleCount" = 14
+      "DesignCapacity" = 5088
+      "OperationStatus" = 58435
+      "ManufactureDate" = 19788
+      "AvgTimeToFull" = 65535
+      "ChargerData" = {"ChargingVoltage"=59442,"ChargingCurrent"=0,"NotChargingReason"=1}
+      "BatterySerialNumber" = "F8Y841503UYJ7PYAQ"
+      "BootPathUpdated" = 1545787882
+      "BatteryData" = {"StateOfCharge"=22272,"Voltage"=12439,"QmaxCell1"=19477,"ResScale"=29952,"QmaxCell2"=65044,"QmaxCell0"=2069,"CycleCount"=14,"DesignCapacity"=5088}
+      "PostDischargeWaitSeconds" = 120
+      "Temperature" = 3046
+      "UserVisiblePathUpdated" = 1545815677
+      "IOReportLegendPublic" = Yes
+      "ManufacturerData" = <00000000090100021876000003393433033030330341544c003d00>
+      "InstantAmperage" = 18446744073709551316
+      "FullyCharged" = No
+      "DeviceName" = "bq20z451"
+      "MaxErr" = 1
+      "IOGeneralInterest" = "IOCommand is not serializable"
+      "IOReportLegend" = ({"IOReportChannels"=((7167869599145487988,6460407809,"BatteryCycleCount")),"IOReportGroupName"="Battery","IOReportChannelInfo"={"IOReportChannelUnit"=0}})
+      "Amperage" = 18446744073709551201
+      "IsCharging" = No
+      "DesignCycleCount9C" = 1000
+      "PostChargeWaitSeconds" = 120
+      "ExternalConnected" = No
+    }
+    
+
