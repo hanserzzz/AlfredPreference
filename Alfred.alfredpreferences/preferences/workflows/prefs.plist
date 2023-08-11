@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>defaultBundleId</key>
-	<string>hanser.com.alfredapp.startproject</string>
+	<string>hanser.com.xcode.clean</string>
 	<key>defaultCreatedBy</key>
 	<string>Hanser</string>
 	<key>defaultReadme</key>
-	<string>Start default environment and qiyivideo project</string>
+	<string>clean xcode</string>
 	<key>defaultWebsite</key>
 	<string>none</string>
 </dict>

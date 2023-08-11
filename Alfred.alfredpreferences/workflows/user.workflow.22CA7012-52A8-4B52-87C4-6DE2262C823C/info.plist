@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>hanser.com.xcode.clean</string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
+	<dict>
+		<key>4960DFBA-993E-42D6-98C6-1CE929250DD4</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>90755038-BB2E-4DD0-803A-95E0B8D27CA3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Hanser</string>
+	<key>description</key>
+	<string>Clean xcode</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>xclean</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>clean</string>
+				<key>subtext</key>
+				<string>xcode clean</string>
+				<key>text</key>
+				<string>clean</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>4960DFBA-993E-42D6-98C6-1CE929250DD4</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query=$1
+
+echo -n $query
+
+
+
+# 清理DerivedData
+DerivedDataPath="/Users/hepengfei/Library/Developer/Xcode/DerivedData"
+rm -rf ${DerivedDataPath}
+
+# clean xcode
+SCHEME_NAME="Skland"
+PROJECT_NAME="Skland"
+PROJECT_ROOT_PATH="/Users/hepengfei/Project/skland-ios"
+WORKSPACE_PATH=${PROJECT_ROOT_PATH}/${PROJECT_NAME}.xcworkspace
+
+xcodebuild clean -workspace ${WORKSPACE_PATH} -scheme ${SCHEME_NAME} -configuration "Debug" || exit</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>90755038-BB2E-4DD0-803A-95E0B8D27CA3</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>clean xcode</string>
+	<key>uidata</key>
+	<dict>
+		<key>4960DFBA-993E-42D6-98C6-1CE929250DD4</key>
+		<dict>
+			<key>xpos</key>
+			<real>75</real>
+			<key>ypos</key>
+			<real>155</real>
+		</dict>
+		<key>90755038-BB2E-4DD0-803A-95E0B8D27CA3</key>
+		<dict>
+			<key>xpos</key>
+			<real>335</real>
+			<key>ypos</key>
+			<real>220</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>webaddress</key>
+	<string>none</string>
+</dict>
+</plist>

@@ -30,6 +30,17 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>518CE92D-1F23-4E37-B9D7-053C53970224</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>jj</string>
+			<key>text</key>
+			<string>Juejin</string>
+			<key>url</key>
+			<string>https://juejin.cn/search?utf8=%E2%9C%93&amp;q=a&amp;query={query}</string>
+		</dict>
 		<key>61B05D01-FCD7-4B6E-ACEE-131D27E091A9</key>
 		<dict>
 			<key>enabled</key>
